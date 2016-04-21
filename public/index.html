@@ -20,6 +20,7 @@
           <th>Email</th>
           <th>Number</th>
           <th>Action</th>
+          <th>&nbsp;</th>
         </tr>
       </thead>
       <tbody>
@@ -37,6 +38,12 @@
             <button class='btn btn-primary' ng-click='addContact()'>Add Contact
             </button>
           </td>
+          <td>
+            <button class='btn btn-info' ng-click='update()'>Update
+            </button>&nbsp;&nbsp;
+            <button class='btn btn-info' ng-click='deselect()'>Clear 
+            </button>
+          </td>
         </tr>
         <tr ng-repeat='contact in contactlist'>
           <td>{{contact.name}}</td>
@@ -44,6 +51,10 @@
           <td>{{contact.number}}</td>
           <td>
             <button class='btn btn-danger' ng-click='remove(contact._id)'>Remove
+            </button>
+          </td>
+          <td>
+            <button class='btn btn-warning' ng-click='edit(contact._id)'>Edit
             </button>
           </td>
         </tr>
